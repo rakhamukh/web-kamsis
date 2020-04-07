@@ -8,36 +8,45 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
+    <title>Simple Blog</title>
+  </head>
 
-   <div class="sidenav">
+
+  <body>
+    <div class="sidenav">
          <div class="login-main-text">
-            <h1>Simple Blog<br></h1>
+            <h1>Simple Blog</h1>
             <h2> Login Page</h2>
             <p>Login or register from here to access.</p>
          </div>
       </div>
-      <div class="main">
-         <div class="col-md-6 col-sm-12">
+        <div class="main">
+          <div class="col-md-6 col-sm-12">
             <div class="login-form">
-               <form>
+  <!--               <?php if( isset($error) ) : ?>
+                  <p style="color: red; font-style: italic;">username / password salah</p>
+              <?php endif; ?> -->
+              <form>
                   <div class="form-group">
-                     <label>User Name</label>
-                     <input type="text" class="form-control" placeholder="User Name">
+                    <label>User Name</label>
+                    <input type="text" class="form-control" placeholder="User Name">
                   </div>
                   <div class="form-group">
-                     <label>Password</label>
-                     <input type="password" class="form-control" placeholder="Password">
+                    <label>Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
                   </div>
                   <div>
-                  <input type="checkbox" name="remember" id="remember">
-                  <label for="remember">Remember me</label>
+                    <input type="checkbox" name="remember" id="remember">
+                    <label for="remember">Remember me</label>
                   </div>
                   <button type="submit" class="btn btn-black">Login</button>
                   <button type="submit" class="btn btn-secondary">Register</button>
-               </form>
+              </form>
             </div>
-         </div>
+          </div>
+        </div>
       </div>
+    </div>
 
 
     <!-- Optional JavaScript -->
