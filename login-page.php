@@ -1,3 +1,31 @@
+<?php 
+
+require 'function.php';
+
+if( isset($_POST["login"]) ) {
+
+  $username = $_POST["username"];
+  $password = $_POST["password"];
+
+  $result = mysqli_query($db, "SELECT * FROM user WHERE username = '$username'");
+
+
+  if( mysqli_num_rows($result) === 1 ) {
+
+ 
+    $row = mysqli_fetch_assoc($result);
+    if( password_verify($password, $row["password"]) ) {
+      header("Location: home-page.php");
+      exit;
+    }
+  }
+
+  $error = true;
+
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -11,7 +39,6 @@
     <title>Simple Blog</title>
   </head>
 
-
   <body>
     <div class="sidenav">
          <div class="login-main-text">
@@ -23,12 +50,12 @@
         <div class="main">
           <div class="col-md-6 col-sm-12">
             <div class="login-form">
-  <!--               <?php if( isset($error) ) : ?>
-                  <p style="color: red; font-style: italic;">username / password salah</p>
-              <?php endif; ?> -->
+              <?php if( isset($error) ) : ?>
+                <p style="color: red; font-style: italic;">username / password salah</p>
+              <?php endif; ?>
               <form method="POST">
                   <div class="form-group">
-                    <label>Usename</label>
+                    <label>Username</label>
                     <input type="text" class="form-control" placeholder="Username" name="username">
                   </div>
                   <div class="form-group">
@@ -39,7 +66,7 @@
                     <input type="checkbox" name="remember" id="remember">
                     <label for="remember">Remember me</label>
                   </div>
-                  <button type="submit" class="btn btn-secondary">Login</button>
+                  <button type="submit" name="login" class="btn btn-secondary">Login</button>
               </form>
               <p>Don't have an account yet ? Register <a href="register-page.php">here</a></p>
             </div>
