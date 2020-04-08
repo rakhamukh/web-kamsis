@@ -15,17 +15,13 @@
   <body>
     <div class="sidenav">
          <div class="login-main-text">
-            <h1>Simple Blog</h1>
-            <h2> Register Page</h2>
-            <p>Login or register from here to access.</p>
+            <h2>Simple Blog</h2>
+            <center><h1> Register Page</h1></center>
          </div>
       </div>
         <div class="main">
           <div class="col-md-6 col-sm-12">
             <div class="login-form">
-  <!--               <?php if( isset($error) ) : ?>
-                  <p style="color: red; font-style: italic;">username / password salah</p>
-              <?php endif; ?> -->
               <form method="POST">
                   <div class="form-group">
                     <label>Username</label>
