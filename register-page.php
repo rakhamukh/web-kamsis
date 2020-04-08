@@ -16,8 +16,8 @@
     <div class="sidenav">
          <div class="login-main-text">
             <h1>Simple Blog</h1>
-            <h2> Login Page</h2>
-            <p>Login from here to access.</p>
+            <h2> Register Page</h2>
+            <p>Login or register from here to access.</p>
          </div>
       </div>
         <div class="main">
@@ -28,20 +28,23 @@
               <?php endif; ?> -->
               <form method="POST">
                   <div class="form-group">
-                    <label>Usename</label>
+                    <label>Username</label>
                     <input type="text" class="form-control" placeholder="Username" name="username">
+                  </div>
+                  <div>
+                    <input type="email" name="email" class="form-control" placeholder="E-mail">
+                    <label for="email">Remember me</label>
                   </div>
                   <div class="form-group">
                     <label>Password</label>
-                    <input type="password" class="form-control" placeholder="Password" password="password">
+                    <input type="password" class="form-control" placeholder="Password" name="password">
                   </div>
-                  <div>
-                    <input type="checkbox" name="remember" id="remember">
-                    <label for="remember">Remember me</label>
+                  <div class="form-group">
+                    <label>Re-Password</label>
+                    <input type="password" class="form-control" placeholder="Re-Password" name="re-password">
                   </div>
-                  <button type="submit" class="btn btn-black">Login</button>
+                  <button type="submit" class="btn btn-secondary">Register</button>
               </form>
-              <p>Don't have an account yet ? Register <a href="register-page.php">here</a></p>
             </div>
           </div>
         </div>
