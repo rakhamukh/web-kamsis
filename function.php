@@ -35,7 +35,7 @@
 
 	$query = "INSERT INTO user VALUES
             ('$nama', '$username', '$email', '$password')
-          ";
+            ";
   	mysqli_query($db, $query);
 
   	return mysqli_affected_rows($db);
