@@ -40,8 +40,8 @@
 
 	$password = password_hash($password, PASSWORD_DEFAULT);
 
-  	mysqli_query( $db, " INSERT INTO user VALUES ('','$nama', '$username', '$email', '$password') " );
-
+  	/* mysqli_query( $db, " INSERT INTO user VALUES ('','$nama', '$username', '$email', '$password') " ); */
+    mysqli_query( $db, " INSERT INTO user ( `nama`, `username`, `email`, `password`) VALUES ('$nama', '$username', '$email', '$password') " );
   	return mysqli_affected_rows($db);
   }
 ?>
